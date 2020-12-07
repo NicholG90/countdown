@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Count Down Timer!</title>
+</head>
+<body>
+    
+
+<!-- Hide this form once input has happened -->
+    <form class="wrapper">
+    <label for="breaklength">Back to the grind in...</label>
+    <input type="number" id="breaklengthhours" placeholder="hours">
+		<input type="number" id="breaklengthminutes" placeholder="minutes">
+		<input type="submit" value="set">
+    </form>
+
+    <div class="defaults">
+      <button class="15"><span>15 Minutes</span></button>
+      <button class="30"><span>30 Minutes</span></button>
+      <button class="60"><span>1 Hour</span></button>
+    </div>
+    
+
+    <div class="countdown">
+    <h1 class="breakLeft"></h1>
+		<button id="add"><i class="fa fa-plus"></i><span>Add 1 Minute</span></button>
+    </div>
+
+    <div>
+    <span class="endtime"></span>
+    </div>
+    
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
