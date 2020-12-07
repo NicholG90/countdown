@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css"/>
     <title>Count Down Timer!</title>
 </head>
 <body>
     
 
-<!-- Hide this form once input has happened -->
-    <form class="wrapper">
-    <label for="breaklength">Back to the grind in...</label>
-    <input type="number" id="breaklengthhours" placeholder="hours">
-		<input type="number" id="breaklengthminutes" placeholder="minutes">
-		<input type="submit" value="set">
+<!-- Input for countdown timer - Hidden after submission -->
+    <form>
+    <span>Back to the grind in...</span>
+    <label class="sr-only" for="formBreakLengthHours">Hours</label>
+    <input type="number" id="formBreakLengthHours" placeholder="hours">
+    <label class="sr-only" for="formBreakLengthMinutes">Minutes</label>
+		<input type="number" id="formBreakLengthMinutes" placeholder="minutes" required>
+		<input type="submit" id="breakTime" value="Break Time!">
     </form>
 
     <div class="defaults">
@@ -25,17 +28,25 @@
     </div>
     
 
-    <div class="countdown">
-    <h1 class="breakLeft"></h1>
-		<button id="add"><i class="fa fa-plus"></i><span>Add 1 Minute</span></button>
+<!-- Countdown timer -->
+    <div class="countdown hideAtEnd">
+    <h1 class="breakLeft">
+      <span class="hours"></span>
+      <span class="minutes"></span>
+      <span class="seconds"></span>
+    </h1>
+		<button id="add"><i class="fa fa-plus"></i><span>  Add 1 Minute</span></button>
     </div>
 
-    <div>
-    <span class="endtime"></span>
+    <div class="hideAtEnd">
+    <span class="endTime"></span>
+    </div>
+
+    <div class ="backToWork">
     </div>
     
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
 	<script src="script.js"></script>
 </body>
 </html>
