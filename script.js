@@ -45,6 +45,8 @@ $(document).ready(() => {
           let breakLengthSeconds = Math.floor(dateDifference % 60);
           let breakLengthMinutes = Math.floor(dateDifference / 60) % 60;
           let breakLengthHours = Math.floor(dateDifference / 3600);
+          // Below is for minutes over 60 for browser tab
+          let breakLengthTotalMinutes = Math.floor(dateDifference / 60)
   
           // Inserting countdown timer into HTML
           $('.hours').html(`${breakLengthHours} Hours`);
@@ -56,7 +58,7 @@ $(document).ready(() => {
           $('.endTime').html(`Make sure you're back by ${humanEndDate.toLocaleTimeString()}`);
   
           // Update the browsers tab to reflect the current time  + "Minutes Left!"
-          $('title').text(breakLengthMinutes + " Minutes Left!");
+          $('title').text(breakLengthTotalMinutes + " Minutes Left!");
   
           // Statement to change background colour depending on minutes left on the timer
           if (dateDifference < 300) {
