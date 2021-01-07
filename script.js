@@ -29,10 +29,10 @@ $(document).ready(() => {
       // Turn submitted values into seconds & setting variable
       breakLength = (breakSubmissionMinutes * 60) + (breakSubmissionHours * 3600);
       // Hiding Form
-      $('form, .defaults').hide(400);
-      // Showing Countdown Timer
-      $('.countdown').show(400).css('display', 'flex');
-  
+      $('form, .defaults').hide(0);
+
+      // 
+      $('.loader').show(0).css('display', 'flex');
       
       endDate = ((Date.now() / 1000) + breakLength)
   
@@ -56,7 +56,11 @@ $(document).ready(() => {
           // Inserting End Date into HTML
           let humanEndDate = new Date(endDate * 1000)
           $('.endTime').html(`Make sure you're back by ${humanEndDate.toLocaleTimeString()}`);
-  
+        
+          // Showing Countdown Timer - Done after calculations
+          $('.loader').hide(0)
+          $('.countdown').show(0).css('display', 'flex');
+
           // Update the browsers tab to reflect the current time  + "Minutes Left!"
           $('title').text(breakLengthTotalMinutes + " Minutes Left!");
   
