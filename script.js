@@ -64,15 +64,15 @@ $(document).ready(() => {
           if (dateDifference < 300) {
             $('body').css({
               'transition': 'background-color 2s ease-in-out',
-              'background-color': '#FC4A1A'
+              'background-color': '#c8553d'
               });
           } else if (dateDifference < 600) {
             $('body').css({
                   'transition': 'background-color 2s ease-in-out',
-                  'background-color': '#F7B733'
+                  'background-color': '#fee440'
               });
           } else {
-            $('body').css('background','#4ABDAC');
+            $('body').css('background','#1A2238');
           }
   
           // Statement to stop timer when it reaches 0 and let user know!

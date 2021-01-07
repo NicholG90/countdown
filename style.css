@@ -9,13 +9,25 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 body {
-    background-color:#4ABDAC;
+    background-color:#1A2238;
     font-family: 'Montserrat';
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+main {
+    background-color:#EF8751;
+    padding: 5%;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(00,00,00,0.5);
+}
+
+h2 {
+    color: #425587;
+    text-align: center;
 }
 form {
     display:flex;
@@ -31,7 +43,7 @@ form span {
 
 #formBreakLengthHours, #formBreakLengthMinutes {
     height: 50px;
-    background-color: lightpink;
+    background-color: #F4DB7D;
     border-radius: 50px;
     border-style: none;
     text-align: center;
@@ -47,7 +59,7 @@ form span {
 #breakTime {
     color: white;
     text-transform: uppercase;
-    background: slateblue;
+    background: #9DAAF2;
     padding: 30px;
     border-radius: 50px;
     border: black dotted;
@@ -81,7 +93,7 @@ form span {
 }
 
 .defaults button:hover, #add:hover {
-    background-color: yellow;
+    background-color: #F4DB7D;
     cursor: pointer;
 }
 
