@@ -83,7 +83,7 @@ $(document).ready(() => {
           if (breakLengthMinutes === 0 && breakLengthSeconds === 0) {
             clearInterval(timer);
             $('.hideAtEnd').slideUp(1000)
-            $('.backToWork').slideDown(1000).html('<img src="./assests/getbacktowork.gif" alt=""></img>')
+            $('.backToWork').slideDown(1000).html('<img src="./assets/getbacktowork.gif" alt=""></img>')
           }
         },1000);
   };
